@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6EpwwtPU9MIwqXOBJVpRFx6/qSnyicuXpCAfJ8YYUYSg5Ru01xp5ApA+BMOKnVphMSEY6OBiR3FTK5AisgYMCA==",
+  "dgSpecHash": "80ys3MI7io8KS++TvZP5cXRohKK1LEVmK2ZwY9w+g7rZqkgolMCn4USVf9LTn/9KbHMpjj//mJnwA8mGMj9pWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Şahin\\Desktop\\Backend - Code\\Task 2023.05.10\\Task\\Task.csproj",
+  "projectFilePath": "C:\\Users\\Şahin\\Desktop\\Backend - Code\\Task 2023.05.15\\Task\\Task.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Şahin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Şahin\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

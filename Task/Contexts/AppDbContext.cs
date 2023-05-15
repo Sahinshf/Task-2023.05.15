@@ -36,8 +36,17 @@ namespace Task.Contexts
                 }
             }
             //EntityState //- Enumdır
-
             return base.SaveChangesAsync(cancellationToken);
+        }
+        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Hər dəfə productla bağlı database sorğu getdikdə bu filteri özü əlavə edəcək
+            // Productla əlaqəli yazılan bütün isDeleted`ləri silə bilərik
+            // Əgər nə vaxtsa bunun işə düşməməsini istəsək İgnoreQueryFilters() deyə bilərik
+            modelBuilder.Entity<Product>().HasQueryFilter(p => !p.IsDeleted);
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
