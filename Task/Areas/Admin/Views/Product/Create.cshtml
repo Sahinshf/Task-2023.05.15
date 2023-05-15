@@ -1,0 +1,65 @@
+﻿@using Task.Areas.Admin.ViewModels;
+@model ProductViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="content-wrapper">
+    <div class="row">
+
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Default form</h4>
+                    <p class="card-description">
+                        Basic form layout
+                    </p>
+
+                    <form class="forms-sample" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">Image</label>
+                            <input class="form-control" asp-for="Image" placeholder="Image" accept="image/*">
+                            <span asp-validation-for="Image"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Name</label>
+                            <input class="form-control" asp-for="Name" placeholder="Name">
+                            <span asp-validation-for="Name"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Price</label>
+                            <input class="form-control" asp-for="Price" placeholder="Price">
+                            <span asp-validation-for="Price"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Rating</label>
+                            <input class="form-control" asp-for="Rating" placeholder="Rating">
+                            <span asp-validation-for="Rating"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="CategoryId">Categories</label>
+                            <select class="form-control" asp-for="CategoryId">
+                                @foreach (Category category in ViewBag.categories)
+                                {
+                                    <option value="@category.Id">@category.Name</option>
+                                }
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

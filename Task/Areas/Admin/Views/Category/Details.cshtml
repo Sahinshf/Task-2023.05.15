@@ -1,0 +1,19 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <h4>Products</h4>
+        <ul>
+            @foreach (var item in Model.Products)
+            {
+                <li>@item.Name</li>
+            }
+        </ul>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>
+
